@@ -3,86 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Henrik Thorslund | Elkonstruktion</title>
 
 <style>
 
 body{
-    font-family: Arial, sans-serif;
     margin:0;
+    font-family:Arial,sans-serif;
     background:#f5f5f5;
-    color:#333;
 }
 
 header{
     background:#1f2937;
     color:white;
     text-align:center;
-    padding:50px;
+    padding:60px;
 }
 
-nav{
-    background:#374151;
-    text-align:center;
-    padding:15px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-}
-
-section{
-    max-width:1000px;
-    margin:20px auto;
-    background:white;
+.projects{
+    max-width:1200px;
+    margin:auto;
     padding:30px;
-    border-radius:10px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
-.project{
-    border:1px solid #ddd;
+.card{
+    background:white;
     border-radius:10px;
     overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
 }
 
-.project-header{
-    background:#1f2937;
-    color:white;
-    padding:15px;
-}
-
-.project-body{
-    padding:20px;
-}
-
-.project img{
+.card img{
     width:100%;
-    border-radius:8px;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
 }
 
 .button{
     display:inline-block;
+    margin-top:10px;
     background:#2563eb;
     color:white;
-    padding:10px 15px;
     text-decoration:none;
-    border-radius:5px;
-    margin-top:10px;
-}
-
-.button:hover{
-    background:#1d4ed8;
-}
-
-.status{
-    display:inline-block;
-    background:green;
-    color:white;
-    padding:5px 10px;
+    padding:10px 15px;
     border-radius:5px;
 }
 
@@ -91,7 +61,6 @@ footer{
     color:white;
     text-align:center;
     padding:20px;
-    margin-top:20px;
 }
 
 </style>
@@ -101,61 +70,51 @@ footer{
 <body>
 
 <header>
-    <h1>Henrik Thorslund</h1>
-    <p>Blivande Elkonstruktör & Automation</p>
+
+<h1>Henrik Thorslund</h1>
+
+<p>
+Portfolio inom elkonstruktion och automation
+</p>
+
 </header>
 
-<nav>
-    <a href="#about">Om mig</a>
-    <a href="#projects">Projekt</a>
-    <a href="#contact">Kontakt</a>
-</nav>
+<section class="projects">
 
-<section id="about">
+<div class="card">
 
-<h2>Om mig</h2>
+<img src="images/motorstart.png" alt="Motorstart">
+
+<div class="card-content">
+
+<h2>Motorstart med kontaktor</h2>
 
 <p>
-Jag bygger upp denna portfolio för att visa mina kunskaper inom
-elkonstruktion, automation och teknisk dokumentation.
+Konstruktion av styrkrets för trefasmotor.
 </p>
 
-</section>
+<a href="projects/motorstart.html" class="button">
+Öppna projekt
+</a>
 
-<section id="projects">
-
-<h2>Projekt</h2>
-
-<div class="project">
-
-<div class="project-header">
-<h3>Projekt 1 - Motorstart med kontaktor</h3>
 </div>
 
-<div class="project-body">
+</div>
 
-<span class="status">Färdig</span>
+<div class="card">
 
-<h4>Elschema</h4>
+<img src="images/pumpstyrning.png" alt="Pumpstyrning">
 
-<img src="motorstart.png" alt="Motorstartschema">
+<div class="card-content">
 
-<h4>Beskrivning</h4>
-
-<p>
-Konstruktion av styrkrets för trefasmotor med kontaktor,
-motorskydd och stoppfunktion.
-</p>
-
-<h4>Funktion</h4>
+<h2>Pumpstyrning</h2>
 
 <p>
-När startknappen trycks in aktiveras kontaktorn som
-startar motorn. Stoppknappen bryter styrkretsen.
+Nivågivare, pump och larm.
 </p>
 
-<a href="motorstart.png" class="button" target="_blank">
-Visa ritning
+<a href="projects/pumpstyrning.html" class="button">
+Öppna projekt
 </a>
 
 </div>
@@ -164,28 +123,11 @@ Visa ritning
 
 </section>
 
-<section id="contact">
-
-<h2>Kontakt</h2>
-
-<p>
-LinkedIn: Din LinkedIn-profil
-</p>
-
-<p>
-E-post: dinmail@example.com
-</p>
-
-</section>
-
 <footer>
 
-<p>
 © 2026 Henrik Thorslund
-</p>
 
 </footer>
 
 </body>
 </html>
-
