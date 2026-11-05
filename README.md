@@ -103,7 +103,7 @@ Konstruktion av styrkrets för trefasmotor.
 
 <div class="card">
 
-<img src="images/pumpstyrning.png" alt="Pumpstyrning">
+<img src="tryckknappslåda.png" alt="Pumpstyrning">
 
 <div class="card-content">
 
