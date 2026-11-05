@@ -83,7 +83,7 @@ Portfolio inom elkonstruktion och automation
 
 <div class="card">
 
-<img src="images/motorstart.png" alt="Motorstart">
+<img src="grass.png" alt="Motorstart">
 
 <div class="card-content">
 
