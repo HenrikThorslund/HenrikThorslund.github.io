@@ -12,25 +12,31 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
             color: #333;
         }
 
         header {
-            background-color: #1f2937;
+            background: #1f2937;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         header h1 {
             margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #cbd5e1;
         }
 
         nav {
-            background-color: #374151;
+            background: #374151;
             text-align: center;
             padding: 15px;
         }
@@ -38,7 +44,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 15px;
+            margin: 0 15px;
             font-weight: bold;
         }
 
@@ -47,49 +53,67 @@
         }
 
         section {
-            background: white;
             max-width: 1000px;
             margin: 20px auto;
+            background: white;
             padding: 30px;
             border-radius: 10px;
         }
 
-        .project {
-            margin-top: 30px;
-            border-left: 5px solid #2563eb;
-            padding-left: 20px;
+        h2 {
+            color: #1f2937;
         }
 
-        .project img {
+        .project-card {
+            margin-top: 25px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project-header {
+            background: #1f2937;
+            color: white;
+            padding: 15px 20px;
+        }
+
+        .project-body {
+            padding: 20px;
+        }
+
+        .project-image {
             width: 100%;
-            max-width: 800px;
-            margin: 15px 0;
             border-radius: 8px;
             border: 1px solid #ddd;
         }
 
         .status {
             display: inline-block;
-            background-color: #16a34a;
+            margin-top: 10px;
+            background: #16a34a;
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 12px;
-            margin-bottom: 10px;
+        }
+
+        .status-progress {
+            background: #f59e0b;
         }
 
         .button {
             display: inline-block;
-            background-color: #2563eb;
+            background: #2563eb;
             color: white;
-            padding: 10px 15px;
             text-decoration: none;
+            padding: 10px 15px;
             border-radius: 5px;
             margin-right: 10px;
+            margin-top: 10px;
         }
 
         .button:hover {
-            background-color: #1d4ed8;
+            background: #1d4ed8;
         }
 
         table {
@@ -105,13 +129,13 @@
         }
 
         table th {
-            background-color: #f1f5f9;
+            background: #f3f4f6;
         }
 
         footer {
-            text-align: center;
-            background-color: #1f2937;
+            background: #1f2937;
             color: white;
+            text-align: center;
             padding: 20px;
             margin-top: 30px;
         }
@@ -122,7 +146,7 @@
 
     <header>
         <h1>Henrik Thorslund</h1>
-        <p>Junior Elkonstruktör | Automation | Industriella Styrsystem</p>
+        <p>Blivande Elkonstruktör | Automation | Industriella Styrsystem</p>
     </header>
 
     <nav>
@@ -133,108 +157,123 @@
     </nav>
 
     <section id="about">
-
         <h2>Om mig</h2>
 
         <p>
-            Jag bygger upp denna portfolio för att visa mina kunskaper
-            inom elkonstruktion, automation och teknisk dokumentation.
+            Jag bygger denna portfolio för att visa och utveckla mina
+            kunskaper inom elkonstruktion, automation och teknisk
+            dokumentation.
         </p>
 
         <p>
-            Här samlar jag egna projekt, elscheman,
+            Syftet är att samla egna projekt, elscheman,
             funktionsbeskrivningar och konstruktionslösningar för att
             utvecklas som elkonstruktör.
         </p>
-
     </section>
 
     <section id="projects">
 
         <h2>Projekt</h2>
 
-        <div class="project">
+        <div class="project-card">
 
-            <span class="status">Färdig</span>
+            <div class="project-header">
+                <h3>Projekt 1 - Motorstart med kontaktor</h3>
+            </div>
 
-            <h3>Projekt 1 - Motorstart med kontaktor</h3>
+            <div class="project-body">
 
-            <img src="images/motorstart.png"
-                alt="Motorstartschema">
+                <span class="status">
+                    Färdig
+                </span>
 
-            <p>
-                Konstruktion av styrkrets för trefasmotor med kontaktor,
-                motorskydd och stoppfunktion.
-            </p>
+                <br><br>
 
-            <h4>Funktion</h4>
+                <img src="images/motorstart.png"
+                    alt="Motorstartschema"
+                    class="project-image">
 
-            <p>
-                Startknappen aktiverar kontaktorn som driver motorn.
-                Stoppknappen bryter styrkretsen och stannar motorn.
-                Motorskyddet skyddar mot överbelastning.
-            </p>
+                <h4>Beskrivning</h4>
 
-            <h4>Säkerhetsfunktioner</h4>
+                <p>
+                    Konstruktion av styrkrets för trefasmotor med
+                    kontaktor, motorskydd och stoppfunktion.
+                </p>
 
-            <ul>
-                <li>Motorskydd</li>
-                <li>Stoppfunktion</li>
-                <li>Manuell återstart</li>
-            </ul>
+                <h4>Funktion</h4>
 
-            <h4>Komponentlista</h4>
+                <p>
+                    Startknappen aktiverar kontaktorn som startar
+                    motorn. Stoppknappen bryter styrkretsen och
+                    stannar motorn.
+                </p>
 
-            <table>
+                <h4>Komponentlista</h4>
 
-                <tr>
-                    <th>Beteckning</th>
-                    <th>Komponent</th>
-                </tr>
+                <table>
 
-                <tr>
-                    <td>K1</td>
-                    <td>Kontaktor</td>
-                </tr>
+                    <tr>
+                        <th>Beteckning</th>
+                        <th>Komponent</th>
+                    </tr>
 
-                <tr>
-                    <td>F1</td>
-                    <td>Motorskydd</td>
-                </tr>
+                    <tr>
+                        <td>K1</td>
+                        <td>Kontaktor</td>
+                    </tr>
 
-                <tr>
-                    <td>S1</td>
-                    <td>Startknapp</td>
-                </tr>
+                    <tr>
+                        <td>F1</td>
+                        <td>Motorskydd</td>
+                    </tr>
 
-                <tr>
-                    <td>S0</td>
-                    <td>Stoppknapp</td>
-                </tr>
+                    <tr>
+                        <td>S1</td>
+                        <td>Startknapp</td>
+                    </tr>
 
-            </table>
+                    <tr>
+                        <td>S0</td>
+                        <td>Stoppknapp</td>
+                    </tr>
 
-            <br>
+                </table>
 
-            <a href="pdf/motorstart.pdf" class="button">
-                Visa PDF
-            </a>
+                <br>
 
-            <a href="pdf/motorstart.pdf" download class="button">
-                Ladda ner PDF
-            </a>
+                <a href="pdf/motorstart.pdf"
+                    class="button">
+                    Visa PDF
+                </a>
+
+                <a href="pdf/motorstart.pdf"
+                    download
+                    class="button">
+                    Ladda ner PDF
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="project">
+        <div class="project-card">
 
-            <span class="status">Pågår</span>
+            <div class="project-header">
+                <h3>Projekt 2 - Pumpstyrning</h3>
+            </div>
 
-            <h3>Projekt 2 - Pumpstyrning</h3>
+            <div class="project-body">
 
-            <p>
-                Enkel styrning med nivågivare, pump och larmfunktion.
-            </p>
+                <span class="status status-progress">
+                    Pågår
+                </span>
+
+                <p>
+                    Styrning av pump med nivågivare och larmfunktion.
+                </p>
+
+            </div>
 
         </div>
 
@@ -251,7 +290,8 @@
             <li>PLC-grunder</li>
             <li>Automation</li>
             <li>Teknisk dokumentation</li>
-            <li>Git & GitHub</li>
+            <li>GitHub Pages</li>
+            <li>Git</li>
             <li>QElectroTech</li>
         </ul>
 
@@ -261,13 +301,15 @@
 
         <h2>Kontakt</h2>
 
-        <p>Email: dinmail@exempel.se</p>
+        <p>
+            E-post: dinmail@example.com
+        </p>
 
         <p>
             LinkedIn:
-            <a href="https://www.linkedin.com"
+            <a href="https://www.linkedin.com/"
                 target="_blank">
-                Besök profil
+                Besök min profil
             </a>
         </p>
 
