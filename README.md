@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -77,16 +76,8 @@
             background: linear-gradient(135deg, #2563eb, #60a5fa);
         }
 
-        .hallkrets {
-            background: linear-gradient(135deg, #16a34a, #4ade80);
-        }
-
         .card-content {
             padding: 20px;
-        }
-
-        .card-content h2 {
-            margin-top: 0;
         }
 
         .button {
@@ -110,6 +101,7 @@
             padding: 20px;
         }
     </style>
+
 </head>
 
 <body>
