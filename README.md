@@ -1,13 +1,13 @@
 
-&lt;html&gt;
+<!DOCTYPE html>
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henrik Thorslund | Elkonstruktion</title>
 
-    &lt;style&gt;
-
+    <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -51,7 +51,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
         }
 
@@ -85,6 +85,10 @@
             padding: 20px;
         }
 
+        .card-content h2 {
+            margin-top: 0;
+        }
+
         .button {
             display: inline-block;
             margin-top: 10px;
@@ -105,7 +109,6 @@
             text-align: center;
             padding: 20px;
         }
-
     </style>
 </head>
 
