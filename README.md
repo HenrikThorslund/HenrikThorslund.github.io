@@ -1,9 +1,112 @@
-<!DOCTYPE html>
+
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henrik Thorslund | Elkonstruktion</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        nav {
+            background: #111827;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 60px;
+        }
+
+        .projects {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .placeholder {
+            height: 200px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .motorstart {
+            background: linear-gradient(135deg, #ea580c, #fb923c);
+        }
+
+        .pump {
+            background: linear-gradient(135deg, #2563eb, #60a5fa);
+        }
+
+        .hallkrets {
+            background: linear-gradient(135deg, #16a34a, #4ade80);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -22,9 +125,8 @@
     <section class="projects" id="projekt">
 
         <div class="card">
-
             <div class="placeholder motorstart">
-                Motorstart
+                ⚡ Motorstart
             </div>
 
             <div class="card-content">
@@ -38,13 +140,11 @@
                     Öppna projekt
                 </a>
             </div>
-
         </div>
 
         <div class="card">
-
-            <div class="placeholder">
-                Pumpstyrning
+            <div class="placeholder pump">
+                💧 Pumpstyrning
             </div>
 
             <div class="card-content">
@@ -58,7 +158,6 @@
                     Öppna projekt
                 </a>
             </div>
-
         </div>
 
     </section>
@@ -68,4 +167,5 @@
     </footer>
 
 </body>
+
 </html>
