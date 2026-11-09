@@ -154,6 +154,25 @@
             </div>
         </div>
 
+        <div class="card">
+    <div class="placeholder hallkrets">
+        💡 Hållkrets
+    </div>
+
+    <div class="card-content">
+        <h2>Hållkrets i TIA Portal</h2>
+
+        <p>
+            Start- och stoppfunktion med minnesbit.
+        </p>
+
+        <a href="projects/hallkrets.html" class="button">
+            Öppna projekt
+        </a>
+    </div>
+</div>
+        
+
     </section>
 
     <footer>
