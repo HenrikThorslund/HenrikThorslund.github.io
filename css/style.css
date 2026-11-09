@@ -85,9 +85,6 @@ header p {
     max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .about h2 {
