@@ -100,4 +100,16 @@ nav a{
 }
 
 
+.motorstart {
+    background: linear-gradient(135deg,#ea580c,#fb923c);
+}
+
+.pump {
+    background: linear-gradient(135deg,#2563eb,#60a5fa);
+}
+
+.hallkrets {
+    background: linear-gradient(135deg,#16a34a,#4ade80);
+}
+
 </style>
