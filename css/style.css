@@ -33,6 +33,11 @@ header {
         #334155 50%,
         #64748b 100%
     );
+
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 header h1 {
