@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<nav>
+    <a href="index.html">Hem</a>
+    <a href="#projekt">Projekt</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>    
 <title>Henrik Thorslund | Elkonstruktion</title>
 
 <style>
