@@ -1,6 +1,5 @@
 
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,7 +50,7 @@
             background: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
             transition: 0.3s;
         }
 
@@ -59,10 +58,15 @@
             transform: translateY(-5px);
         }
 
-        .card img {
-            width: 100%;
+        .placeholder {
             height: 200px;
-            object-fit: cover;
+            background: #2563eb;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
         }
 
         .card-content {
@@ -77,6 +81,10 @@
             text-decoration: none;
             padding: 10px 15px;
             border-radius: 5px;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
         }
 
         footer {
@@ -105,7 +113,10 @@
     <section class="projects" id="projekt">
 
         <div class="card">
-            <img src="grass.png" alt="Motorstart">
+
+            <div class="placeholder">
+                Motorstart
+            </div>
 
             <div class="card-content">
                 <h2>Motorstart med kontaktor</h2>
@@ -118,10 +129,14 @@
                     Öppna projekt
                 </a>
             </div>
+
         </div>
 
         <div class="card">
-            <img src="grass.png" alt="Pumpstyrning">
+
+            <div class="placeholder">
+                Pumpstyrning
+            </div>
 
             <div class="card-content">
                 <h2>Pumpstyrning</h2>
@@ -134,6 +149,7 @@
                     Öppna projekt
                 </a>
             </div>
+
         </div>
 
     </section>
@@ -143,5 +159,4 @@
     </footer>
 
 </body>
-
 </html>
