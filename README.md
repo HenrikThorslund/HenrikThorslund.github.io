@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="sv">
+&lt;html&gt;
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henrik Thorslund | Elkonstruktion</title>
 
-    <style>
+    &lt;style&gt;
 
         body {
             margin: 0;
