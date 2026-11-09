@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
+    color: #1f2937;
 }
 
 nav {
@@ -25,7 +26,20 @@ header {
     background: #1f2937;
     color: white;
     text-align: center;
-    padding: 60px;
+    padding: 70px 20px;
+}
+
+.about {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    margin-top: 0;
 }
 
 .projects {
@@ -41,7 +55,7 @@ header {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
 
@@ -58,6 +72,8 @@ header {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* Projektfärger */
 
 .motorstart {
     background: linear-gradient(135deg, #ea580c, #fb923c);
@@ -87,32 +103,45 @@ header {
     margin-top: 0;
 }
 
+.tag {
+    display: inline-block;
+    background: #e5e7eb;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
 .button {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     background: #2563eb;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
+    transition: 0.3s;
 }
-
-.about {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-}
-
 
 .button:hover {
     background: #1d4ed8;
 }
 
 footer {
+    margin-top: 40px;
     background: #1f2937;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
 }
+
+footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
