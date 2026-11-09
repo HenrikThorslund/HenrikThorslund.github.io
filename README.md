@@ -23,7 +23,7 @@
 
         <div class="card">
 
-            <div class="placeholder orange">
+            <div class="placeholder motorstart">
                 Motorstart
             </div>
 
