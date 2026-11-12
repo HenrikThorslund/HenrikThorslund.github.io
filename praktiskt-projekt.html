@@ -4,62 +4,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktiskt Automationsprojekt</title>
+    <title>Praktiskt Automationsprojekt | Henrik Thorslund</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+    <nav>
 
-<section class="about">
-
-    <h2>Praktiska projekt</h2>
-
-    <p>
-        Förutom programmering i Siemens TIA Portal bygger jag även
-        praktiska automationslösningar med PLC, givare, reläer och
-        signalutrustning för att utveckla förståelse för hela kedjan
-        från elschema till färdig funktion.
-    </p>
-
-</section>
-
-<section class="projects">
-
-    <div class="card">
-
-        <div class="placeholder pump">
-            🏭
+        <div class="logo">
+            ⚡ Henrik Thorslund
         </div>
 
-        <div class="card-content">
+        <div class="nav-links">
+            <a href="index.html">Hem</a>
+            <a href="#oversikt">Översikt</a>
+            <a href="#hardvara">Hårdvara</a>
+            <a href="#io">I/O-lista</a>
+            <a href="#tester">Tester</a>
+        </div>
 
-            <h2>Säker Materialdetektering</h2>
+    </nav>
 
-            <p>
-                Praktiskt automationsprojekt byggt med Siemens S7-1200 G2,
-                induktiv givare, relämodul och signallampor.
-            </p>
+    <header>
 
-            <p>
-                Systemet övervakar materialnärvaro och säkerhetsfunktioner
-                med hjälp av tre NC-brytare och en induktiv givare.
-            </p>
+        <h1>Praktiskt Automationsprojekt</h1>
 
-            <p>
-                <span class="tag">S7-1200 G2</span>
-                <span class="tag">Induktiv givare</span>
-                <span class="tag">Felsökning</span>
-                <span class="tag">Praktisk automation</span>
-            </p>
+        <p class="subtitle">
+            Siemens S7-1200 G2 • Induktiv givare • Finder-relä
+        </p>
 
-            <a href="materialdetektering.html" class="button">
-                Öppna projekt
+    </header>
+
+    <section class="about" id="oversikt">
+
+        <h2>Projektöversikt</h2>
+
+        <p>
+            Ett praktiskt automationsprojekt byggt med Siemens S7-1200 G2,
+            induktiv givare, Finder-relä, signallampor och säkerhetsbrytare.
+        </p>
+
+        <p>
+            Projektet simulerar en enkel industristation där material
+            måste detekteras samtidigt som säkerhetsvillkor uppfylls.
+        </p>
+
+    </section>
+
+    <section class="about" id="hardvara">
+
+        <h2>Använd hårdvara</h2>
+
+        <ul>
+            <li>Siemens S7-1200 G2</li>
+            <li>Induktiv givare</li>
+            <li>Finder Type 90.03</li>
+            <li>2 signallampor</li>
+            <li>3 NC-brytare</li>
+            <li>24V DC styrspänning</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Funktion</h2>
+
+        <p>
+            Systemet övervakar tre säkerhetsbrytare och en induktiv givare.
+        </p>
+
+        <p>
+            När alla säkerhetsvillkor är uppfyllda och givaren detekterar
+            material tänds den gröna lampan.
+        </p>
+
+        <p>
+            Om material saknas eller om någon säkerhetsbrytare bryts
+            tänds den röda lampan.
+        </p>
+
+    </section>
+
+    <section class="about" id="io">
+
+        <h2>I/O-lista</h2>
+
+        <table>
+
+            <tr>
+                <th>Signal</th>
+                <th>Adress</th>
+                <th>Typ</th>
+            </tr>
+
+            <tr>
+                <td>Nödstopp</td>
+                <td>I0.0</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>NC-brytare 1</td>
+                <td>I0.1</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>NC-brytare 2</td>
+                <td>I0.2</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Induktiv givare</td>
+                <td>I0.3</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Grön lampa</td>
+                <td>Q0.0</td>
+                <td>DO</td>
+            </tr>
+
+            <tr>
+                <td>Röd lampa</td>
+                <td>Q0.1</td>
+                <td>DO</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>PLC-struktur</h2>
+
+<pre>
+OB1
+│
+├── FB_Safety
+│
+├── FB_MaterialDetection
+│
+└── FB_Outputs
+</pre>
+
+        <p>
+            Programmet är uppdelat i separata funktionsblock för att
+            efterlikna arbetssätt som används inom industrin.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Systemlogik</h2>
+
+<pre>
+Nödstopp OK
+AND
+
+NC-brytare 1 OK
+AND
+
+NC-brytare 2 OK
+AND
+
+Material upptäckt
+
+↓
+
+Grön lampa ON
+
+Röd lampa OFF
+</pre>
+
+<pre>
+Material saknas
+ELLER
+
+Säkerhetsbrytare öppen
+
+↓
+
+Röd lampa ON
+</pre>
+
+    </section>
+
+    <section class="about" id="tester">
+
+        <h2>Testprotokoll</h2>
+
+        <table>
+
+            <tr>
+                <th>Test</th>
+                <th>Förväntat resultat</th>
+            </tr>
+
+            <tr>
+                <td>Metall upptäckt</td>
+                <td>Grön lampa tänds</td>
+            </tr>
+
+            <tr>
+                <td>Material saknas</td>
+                <td>Röd lampa tänds</td>
+            </tr>
+
+            <tr>
+                <td>Nödstopp aktiveras</td>
+                <td>Röd lampa tänds</td>
+            </tr>
+
+            <tr>
+                <td>NC-brytare öppnas</td>
+                <td>Röd lampa tänds</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Lärdomar</h2>
+
+        <p>
+            Projektet kombinerar praktisk inkoppling, programmering,
+            givarteknik och felsökning.
+        </p>
+
+        <p>
+            Målet har varit att skapa ett verklighetsnära automationssystem
+            som visar både elkunskap och PLC-kompetens.
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Henrik Thorslund</p>
+
+        <p>
+            <a href="index.html">
+                ← Tillbaka till startsidan
             </a>
+        </p>
 
-        </div>
+    </footer>
 
-    </div>
+</body>
 
-</section>
+</html>
