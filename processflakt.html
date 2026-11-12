@@ -1,1 +1,283 @@
 
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processfläkt med Frekvensomriktare | Henrik Thorslund</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            ⚡ Henrik Thorslund
+        </div>
+
+        <div class="nav-links">
+            <a href="../index.html">Hem</a>
+            <a href="#oversikt">Översikt</a>
+            <a href="#io">I/O</a>
+            <a href="#hmi">WinCC</a>
+            <a href="#tester">Tester</a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Processfläkt med Frekvensomriktare</h1>
+
+        <p class="subtitle">
+            Siemens S7-1500 • TIA Portal • WinCC • PLCSIM
+        </p>
+
+    </header>
+
+    <section class="about" id="oversikt">
+
+        <h2>Projektöversikt</h2>
+
+        <p>
+            Detta projekt simulerar en industriell processfläkt
+            styrd via frekvensomriktare och Siemens PLC.
+        </p>
+
+        <p>
+            Projektet är utvecklat för att visa kompetens inom:
+        </p>
+
+        <ul>
+            <li>PLC-programmering i TIA Portal</li>
+            <li>Strukturerad programuppbyggnad</li>
+            <li>WinCC HMI</li>
+            <li>Larmhantering</li>
+            <li>Testning i PLCSIM</li>
+            <li>Dokumentation enligt industristandard</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Systemarkitektur</h2>
+
+<pre>
+WinCC HMI
+     │
+     ▼
+Siemens S7-1500
+     │
+     ▼
+Frekvensomriktare
+     │
+     ▼
+Industrifläkt
+</pre>
+
+        <p>
+            Operatören startar och stoppar fläkten via HMI.
+            PLC:n övervakar driftstatus, larm och styr
+            frekvensomriktaren.
+        </p>
+
+    </section>
+
+    <section class="about" id="io">
+
+        <h2>I/O-lista</h2>
+
+        <table style="width:100%; border-collapse:collapse;">
+
+            <tr>
+                <th>Signal</th>
+                <th>Adress</th>
+                <th>Typ</th>
+            </tr>
+
+            <tr>
+                <td>Startknapp</td>
+                <td>I0.0</td>
+                <td>Digital Input</td>
+            </tr>
+
+            <tr>
+                <td>Stoppknapp</td>
+                <td>I0.1</td>
+                <td>Digital Input</td>
+            </tr>
+
+            <tr>
+                <td>Nödstopp</td>
+                <td>I0.2</td>
+                <td>Digital Input</td>
+            </tr>
+
+            <tr>
+                <td>Driftindikering</td>
+                <td>I0.3</td>
+                <td>Digital Input</td>
+            </tr>
+
+            <tr>
+                <td>Motorfel</td>
+                <td>I0.4</td>
+                <td>Digital Input</td>
+            </tr>
+
+            <tr>
+                <td>Motor Start</td>
+                <td>Q0.0</td>
+                <td>Digital Output</td>
+            </tr>
+
+            <tr>
+                <td>Reset VFD</td>
+                <td>Q0.1</td>
+                <td>Digital Output</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>PLC-struktur</h2>
+
+<pre>
+OB1
+│
+├── FB_IO
+│
+├── FB_Motor
+│
+├── FB_Alarm
+│
+└── FB_HMI
+</pre>
+
+        <h3>FB_IO</h3>
+
+        <p>
+            Hanterar alla fysiska in- och utgångar.
+        </p>
+
+        <h3>FB_Motor</h3>
+
+        <p>
+            Ansvarar för Start, Stopp, Reset
+            och driftlogik.
+        </p>
+
+        <h3>FB_Alarm</h3>
+
+        <p>
+            Hanterar motorfel, nödstopp och
+            framtida larmfunktioner.
+        </p>
+
+        <h3>FB_HMI</h3>
+
+        <p>
+            Kommunikation mellan PLC och WinCC.
+        </p>
+
+    </section>
+
+    <section class="about" id="hmi">
+
+        <h2>WinCC HMI</h2>
+
+        <h3>Processbild</h3>
+
+        <ul>
+            <li>Start-knapp</li>
+            <li>Stopp-knapp</li>
+            <li>Reset-knapp</li>
+            <li>Motorstatus</li>
+            <li>Driftindikering</li>
+            <li>Hastighetsinställning</li>
+        </ul>
+
+        <h3>Larmbild</h3>
+
+        <ul>
+            <li>Motorfel</li>
+            <li>Nödstopp</li>
+            <li>Kommunikationsfel</li>
+        </ul>
+
+    </section>
+
+    <section class="about" id="tester">
+
+        <h2>Testprotokoll</h2>
+
+        <table style="width:100%; border-collapse:collapse;">
+
+            <tr>
+                <th>Test</th>
+                <th>Förväntat resultat</th>
+            </tr>
+
+            <tr>
+                <td>Start</td>
+                <td>Motor startar</td>
+            </tr>
+
+            <tr>
+                <td>Stopp</td>
+                <td>Motor stoppar</td>
+            </tr>
+
+            <tr>
+                <td>Motorfel</td>
+                <td>Motor stoppas och larm visas</td>
+            </tr>
+
+            <tr>
+                <td>Reset</td>
+                <td>Larm återställs</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Lärdomar</h2>
+
+        <p>
+            Projektet har utvecklat mina kunskaper inom
+            Siemens TIA Portal, strukturerad PLC-programmering,
+            HMI-utveckling, larmhantering och testning i PLCSIM.
+        </p>
+
+        <p>
+            Fokus har legat på att arbeta enligt metoder som
+            används inom industrin och automationstekniska projekt.
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Henrik Thorslund</p>
+
+        <p>
+            <a href="../index.html">
+                ← Tillbaka till startsidan
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
