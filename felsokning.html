@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felsökning & Rotorsaksanalys | Henrik Thorslund</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            ⚡ Henrik Thorslund
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Hem</a>
+            <a href="#problem">Problem</a>
+            <a href="#analys">Analys</a>
+            <a href="#atgard">Åtgärd</a>
+            <a href="#resultat">Resultat</a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Felsökning & Rotorsaksanalys</h1>
+
+        <p class="subtitle">
+            Industriell Felsökning • Underhåll • Automation
+        </p>
+
+    </header>
+
+    <section class="about" id="problem">
+
+        <h2>Problemställning</h2>
+
+        <p>
+            En transportör i en produktionsanläggning stannar
+            oregelbundet flera gånger per vecka.
+        </p>
+
+        <p>
+            Driftpersonalen rapporterar att felet uppstår utan tydligt
+            mönster vilket orsakar produktionsstopp och onödigt underhållsarbete.
+        </p>
+
+    </section>
+
+    <section class="about" id="analys">
+
+        <h2>Genomförd Analys</h2>
+
+        <p>
+            För att hitta orsaken genomfördes följande steg:
+        </p>
+
+        <ul>
+            <li>Kontroll av larmhistorik</li>
+            <li>Kontroll av PLC-signaler</li>
+            <li>Kontroll av givare</li>
+            <li>Kontroll av kablage</li>
+            <li>Intervjuer med operatörer</li>
+            <li>Observation under drift</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Identifierat Fel</h2>
+
+        <p>
+            Analysen visade att en induktiv givare gav instabila signaler.
+        </p>
+
+        <p>
+            När signalen försvann uppfattade PLC-systemet att
+            material saknades och transportören stoppades.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Rotorsak</h2>
+
+<pre>
+Symptom:
+Transportör stannar
+
+↓
+
+PLC registrerar material saknas
+
+↓
+
+Instabil signal från givare
+
+↓
+
+Kabelskada nära anslutning
+
+↓
+
+ROTORSAK IDENTIFIERAD
+</pre>
+
+        <p>
+            Grundorsaken identifierades som mekaniskt slitage
+            på givarkabeln.
+        </p>
+
+    </section>
+
+    <section class="about" id="atgard">
+
+        <h2>Åtgärder</h2>
+
+        <ul>
+            <li>Defekt givarkabel byttes ut</li>
+            <li>Ny kabelavlastning installerades</li>
+            <li>Visuell inspektion lades till i underhållsplan</li>
+            <li>Operatörsinstruktion uppdaterades</li>
+        </ul>
+
+    </section>
+
+    <section class="about" id="resultat">
+
+        <h2>Resultat</h2>
+
+        <table>
+
+            <tr>
+                <th>Parameter</th>
+                <th>Före</th>
+                <th>Efter</th>
+            </tr>
+
+            <tr>
+                <td>Oplanerade stopp/vecka</td>
+                <td>8</td>
+                <td>0</td>
+            </tr>
+
+            <tr>
+                <td>Produktionsbortfall</td>
+                <td>Högt</td>
+                <td>Lågt</td>
+            </tr>
+
+            <tr>
+                <td>Driftstabilitet</td>
+                <td>Otillräcklig</td>
+                <td>God</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Lärdomar</h2>
+
+        <p>
+            Projektet visar vikten av strukturerad felsökning
+            och att identifiera grundorsaken istället för att
+            endast åtgärda symptomen.
+        </p>
+
+        <p>
+            Arbetet gav erfarenhet av analys, dokumentation,
+            problemlösning och förbättringsarbete inom
+            industriell automation.
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Henrik Thorslund</p>
+
+        <p>
+            <a href="index.html">
+                ← Tillbaka till startsidan
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
