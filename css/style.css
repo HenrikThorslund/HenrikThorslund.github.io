@@ -1,6 +1,3 @@
-body {
-    background: red !important;
-}
 /* =========================
    RESET
 ========================= */
@@ -70,11 +67,7 @@ nav {
 ========================= */
 
 header {
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #1e40af
-    );
+    background: linear-gradient(135deg, #0f172a, #1e40af);
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -107,7 +100,7 @@ header h1 {
 }
 
 /* =========================
-   SEKTIONER
+   SEKTIONSBOXAR
 ========================= */
 
 .about {
@@ -165,11 +158,9 @@ header h1 {
 
 .placeholder {
     height: 220px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 60px;
 }
 
@@ -180,55 +171,35 @@ header h1 {
 /* Processfläkt */
 
 .plc {
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #60a5fa
-    );
+    background: linear-gradient(135deg, #2563eb, #60a5fa);
     color: white;
 }
 
 /* Pumpstation */
 
 .pump {
-    background: linear-gradient(
-        135deg,
-        #0891b2,
-        #22d3ee
-    );
+    background: linear-gradient(135deg, #0891b2, #22d3ee);
     color: white;
 }
 
 /* Felsökning */
 
 .troubleshooting {
-    background: linear-gradient(
-        135deg,
-        #ea580c,
-        #fb923c
-    );
+    background: linear-gradient(135deg, #ea580c, #fb923c);
     color: white;
 }
 
 /* Modernisering */
 
 .modernization {
-    background: linear-gradient(
-        135deg,
-        #9333ea,
-        #c084fc
-    );
+    background: linear-gradient(135deg, #9333ea, #c084fc);
     color: white;
 }
 
 /* Praktiskt projekt */
 
 .practical {
-    background: linear-gradient(
-        135deg,
-        #16a34a,
-        #4ade80
-    );
+    background: linear-gradient(135deg, #16a34a, #4ade80);
     color: white;
 }
 
