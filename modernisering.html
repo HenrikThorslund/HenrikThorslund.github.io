@@ -1,1 +1,285 @@
 
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernisering av Relästyrning | Henrik Thorslund</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            ⚡ Henrik Thorslund
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Hem</a>
+            <a href="#oversikt">Översikt</a>
+            <a href="#befintligt">Befintligt System</a>
+            <a href="#nytt">Ny Lösning</a>
+            <a href="#resultat">Resultat</a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Modernisering av Relästyrning</h1>
+
+        <p class="subtitle">
+            Reläteknik • PLC • Siemens TIA Portal
+        </p>
+
+    </header>
+
+    <section class="about" id="oversikt">
+
+        <h2>Projektöversikt</h2>
+
+        <p>
+            Projektet visar hur en äldre reläbaserad styrning kan
+            moderniseras och ersättas med ett PLC-system.
+        </p>
+
+        <p>
+            Målet är att förbättra driftsäkerhet,
+            felsökning och framtida utvecklingsmöjligheter.
+        </p>
+
+    </section>
+
+    <section class="about" id="befintligt">
+
+        <h2>Befintligt System</h2>
+
+        <p>
+            Ursprungligen styrdes anläggningen med:
+        </p>
+
+        <ul>
+            <li>Kontaktor</li>
+            <li>Relälogik</li>
+            <li>Startknapp</li>
+            <li>Stoppknapp</li>
+            <li>Signallampor</li>
+        </ul>
+
+        <p>
+            Begränsningar:
+        </p>
+
+        <ul>
+            <li>Svår felsökning</li>
+            <li>Ingen larmhistorik</li>
+            <li>Ingen dataloggning</li>
+            <li>Begränsad flexibilitet</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Original lösning</h2>
+
+<pre>
+Startknapp
+    │
+    ▼
+
+Kontaktor
+
+    │
+
+Motor
+
+    ▲
+
+Hållkrets via hjälpkontakt
+</pre>
+
+    </section>
+
+    <section class="about" id="nytt">
+
+        <h2>Ny PLC-baserad lösning</h2>
+
+<pre>
+Startknapp
+      │
+      ▼
+
+Siemens PLC
+
+      │
+      ▼
+
+Kontaktor
+
+      │
+      ▼
+
+Motor
+</pre>
+
+        <p>
+            PLC:n hanterar all logik vilket gör systemet
+            betydligt enklare att ändra och felsöka.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Programstruktur</h2>
+
+<pre>
+OB1
+│
+├── FB_StartStop
+│
+├── FB_Alarm
+│
+└── FB_IO
+</pre>
+
+        <p>
+            Funktionerna delas upp i separata block
+            för bättre struktur och återanvändbarhet.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>I/O-lista</h2>
+
+        <table>
+
+            <tr>
+                <th>Signal</th>
+                <th>Adress</th>
+            </tr>
+
+            <tr>
+                <td>Startknapp</td>
+                <td>I0.0</td>
+            </tr>
+
+            <tr>
+                <td>Stoppknapp</td>
+                <td>I0.1</td>
+            </tr>
+
+            <tr>
+                <td>Nödstopp</td>
+                <td>I0.2</td>
+            </tr>
+
+            <tr>
+                <td>Motor drift</td>
+                <td>Q0.0</td>
+            </tr>
+
+            <tr>
+                <td>Grön lampa</td>
+                <td>Q0.1</td>
+            </tr>
+
+            <tr>
+                <td>Röd lampa</td>
+                <td>Q0.2</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Fördelar med PLC-lösningen</h2>
+
+        <ul>
+            <li>Snabbare felsökning</li>
+            <li>Enklare framtida utbyggnad</li>
+            <li>Möjlighet till HMI</li>
+            <li>Möjlighet till larmhantering</li>
+            <li>Bättre dokumentation</li>
+            <li>Kortare stopptider</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Testprotokoll</h2>
+
+        <table>
+
+            <tr>
+                <th>Test</th>
+                <th>Förväntat resultat</th>
+            </tr>
+
+            <tr>
+                <td>Startknapp</td>
+                <td>Motor startar</td>
+            </tr>
+
+            <tr>
+                <td>Stoppknapp</td>
+                <td>Motor stoppar</td>
+            </tr>
+
+            <tr>
+                <td>Nödstopp</td>
+                <td>Motor stoppar direkt</td>
+            </tr>
+
+            <tr>
+                <td>Driftindikering</td>
+                <td>Grön lampa tänds</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about" id="resultat">
+
+        <h2>Resultat</h2>
+
+        <p>
+            Projektet visar hur äldre relälogik kan ersättas
+            med modern PLC-teknik för att skapa en mer flexibel
+            och lättunderhållen anläggning.
+        </p>
+
+        <p>
+            Arbetet gav erfarenhet av elschema,
+            PLC-programmering, dokumentation och modernisering
+            av industriella styrsystem.
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Henrik Thorslund</p>
+
+        <p>
+            <a href="index.html">
+                ← Tillbaka till startsidan
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
