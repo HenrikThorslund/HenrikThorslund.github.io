@@ -412,3 +412,29 @@ footer a:hover {
         grid-template-columns: 1fr;
     }
 }
+.troubleshooting {
+    background: linear-gradient(
+        135deg,
+        #ea580c,
+        #fb923c
+    );
+    color: white;
+}
+
+.modernization {
+    background: linear-gradient(
+        135deg,
+        #9333ea,
+        #c084fc
+    );
+    color: white;
+}
+
+.practical {
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #4ade80
+    );
+    color: white;
+}
