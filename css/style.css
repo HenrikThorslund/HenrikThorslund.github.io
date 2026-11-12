@@ -1,4 +1,6 @@
-/* Huvudprojekt */
+/* =========================
+   Alleima Portfolio Design
+========================= */
 
 .featured-project {
     grid-column: 1 / -1;
@@ -13,37 +15,55 @@
 .featured-project .card-content h2 {
     font-size: 32px;
     margin-bottom: 15px;
+    color: #1e293b;
 }
 
 .featured-project .card-content p {
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 18px;
 }
 
-/* Statusruta */
+/* =========================
+   Statusruta
+========================= */
 
 .status-box {
     max-width: 1000px;
-    margin: 30px auto;
-    padding: 25px;
+    margin: 40px auto;
+    padding: 30px;
     background: #dbeafe;
     border-left: 6px solid #2563eb;
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Sektionrubriker */
+.status-box h2 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.status-box p {
+    line-height: 1.7;
+}
+
+/* =========================
+   Sektionsrubriker
+========================= */
 
 .section-title {
     text-align: center;
+    font-size: 36px;
+    color: #1f2937;
     margin-top: 60px;
     margin-bottom: 20px;
-    font-size: 36px;
 }
 
-/* Kommande projekt */
+/* =========================
+   Kommande projekt
+========================= */
 
 .upcoming {
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 .upcoming .placeholder {
@@ -52,4 +72,109 @@
         #475569,
         #64748b
     );
+}
+
+/* =========================
+   Projektlistor
+========================= */
+
+.card-content ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   Processflakt-sidan
+========================= */
+
+.about table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.about table th {
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.about table td {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+}
+
+.about table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* =========================
+   Kodblock
+========================= */
+
+pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* =========================
+   Kompetenssektion
+========================= */
+
+.about:last-of-type {
+    text-align: center;
+}
+
+.about:last-of-type p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================
+   Mobilanpassning
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .featured-project .card-content h2 {
+        font-size: 24px;
+    }
+
+    .featured-project .placeholder {
+        height: 220px;
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
 }
