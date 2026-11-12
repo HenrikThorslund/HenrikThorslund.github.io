@@ -1,1 +1,293 @@
 
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumpstation | Henrik Thorslund</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            ⚡ Henrik Thorslund
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Hem</a>
+            <a href="#oversikt">Översikt</a>
+            <a href="#io">I/O-lista</a>
+            <a href="#struktur">PLC-struktur</a>
+            <a href="#tester">Tester</a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Pumpstation med redundanta pumpar</h1>
+
+        <p class="subtitle">
+            Siemens S7-1500 • WinCC • Automatik • Reservpump
+        </p>
+
+    </header>
+
+    <section class="about" id="oversikt">
+
+        <h2>Projektöversikt</h2>
+
+        <p>
+            Projektet simulerar en industriell pumpstation där två pumpar
+            används för att hålla rätt nivå i en processtank.
+        </p>
+
+        <p>
+            Systemet använder:
+        </p>
+
+        <ul>
+            <li>Automatisk nivåstyrning</li>
+            <li>Reservpump vid fel</li>
+            <li>Larmhantering</li>
+            <li>WinCC HMI</li>
+            <li>PLCSIM-testning</li>
+            <li>Dokumentation enligt industristandard</li>
+        </ul>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Processöversikt</h2>
+
+<pre>
+         Tank
+
+      ┌─────────┐
+      │         │
+      │ Vatten  │
+      │         │
+      └────┬────┘
+           │
+           ▼
+
+      Pump P1
+           │
+
+      Pump P2
+      (Reserv)
+
+</pre>
+
+        <p>
+            Pump P1 används som huvudpump.
+            Om Pump P1 får fel övertar Pump P2 driften automatiskt.
+        </p>
+
+    </section>
+
+    <section class="about" id="io">
+
+        <h2>I/O-lista</h2>
+
+        <table>
+
+            <tr>
+                <th>Signal</th>
+                <th>Adress</th>
+                <th>Typ</th>
+            </tr>
+
+            <tr>
+                <td>Låg nivå</td>
+                <td>I0.0</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Hög nivå</td>
+                <td>I0.1</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Pump P1 Fel</td>
+                <td>I0.2</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Pump P2 Fel</td>
+                <td>I0.3</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Auto/Manuell</td>
+                <td>I0.4</td>
+                <td>DI</td>
+            </tr>
+
+            <tr>
+                <td>Start Pump P1</td>
+                <td>Q0.0</td>
+                <td>DO</td>
+            </tr>
+
+            <tr>
+                <td>Start Pump P2</td>
+                <td>Q0.1</td>
+                <td>DO</td>
+            </tr>
+
+            <tr>
+                <td>Hög nivå-larm</td>
+                <td>Q0.2</td>
+                <td>DO</td>
+            </tr>
+
+            <tr>
+                <td>Fellarm</td>
+                <td>Q0.3</td>
+                <td>DO</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about" id="struktur">
+
+        <h2>PLC-struktur</h2>
+
+<pre>
+OB1
+│
+├── FB_LevelControl
+│
+├── FB_PumpControl
+│
+├── FB_Alarm
+│
+└── FB_HMI
+</pre>
+
+        <h3>FB_LevelControl</h3>
+
+        <p>
+            Hanterar nivågivare och start/stopp-logik.
+        </p>
+
+        <h3>FB_PumpControl</h3>
+
+        <p>
+            Växling mellan Pump P1 och Pump P2.
+        </p>
+
+        <h3>FB_Alarm</h3>
+
+        <p>
+            Hantering av nivålarm och pumpfel.
+        </p>
+
+        <h3>FB_HMI</h3>
+
+        <p>
+            Kommunikation mellan PLC och WinCC.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>WinCC HMI</h2>
+
+        <ul>
+            <li>Tanknivå</li>
+            <li>Status Pump P1</li>
+            <li>Status Pump P2</li>
+            <li>Auto/Manuell drift</li>
+            <li>Larmhistorik</li>
+            <li>Driftindikering</li>
+        </ul>
+
+    </section>
+
+    <section class="about" id="tester">
+
+        <h2>Testprotokoll</h2>
+
+        <table>
+
+            <tr>
+                <th>Test</th>
+                <th>Förväntat resultat</th>
+            </tr>
+
+            <tr>
+                <td>Låg nivå</td>
+                <td>Pump P1 startar</td>
+            </tr>
+
+            <tr>
+                <td>Hög nivå</td>
+                <td>Pump P1 stoppar</td>
+            </tr>
+
+            <tr>
+                <td>P1 fel</td>
+                <td>Pump P2 tar över</td>
+            </tr>
+
+            <tr>
+                <td>P2 fel</td>
+                <td>Larm visas</td>
+            </tr>
+
+            <tr>
+                <td>Auto/Manuell växling</td>
+                <td>System ändrar driftläge</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Lärdomar</h2>
+
+        <p>
+            Projektet gav erfarenhet av redundanta system,
+            larmhantering, PLC-programmering och strukturering
+            av automationsprojekt enligt industristandard.
+        </p>
+
+        <p>
+            Arbetet omfattade både programmering,
+            simulering och teknisk dokumentation.
+        </p>
+
+    </section>
+
+    <footer>
+
+        <p>© 2026 Henrik Thorslund</p>
+
+        <p>
+            <a href="index.html">
+                ← Tillbaka till startsidan
+            </a>
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
