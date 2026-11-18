@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -21,8 +22,8 @@
             <a href="../index.html">Hem</a>
             <a href="#oversikt">Översikt</a>
             <a href="#plc">PLC</a>
-            <a href="#larm">Larm</a>
             <a href="#hmi">HMI</a>
+            <a href="#larande">Lärdomar</a>
         </div>
 
     </nav>
@@ -48,45 +49,79 @@
         </p>
 
         <p>
-            Lösningen innehåller start- och stoppfunktioner,
+            Projektet innehåller start- och stoppfunktion,
             driftindikering, larmhantering och visualisering i WinCC.
         </p>
 
         <p>
-            Projektet testades i PLCSIM och gav praktisk erfarenhet av
-            hur PLC-program, HMI och operatörsstöd samverkar i ett
-            automationsprojekt.
+            Lösningen verifierades med Siemens PLCSIM och gav
+            praktisk erfarenhet av PLC-programmering och operatörssystem.
         </p>
 
     </section>
 
     <section class="about" id="plc">
 
-        <h2>PLC-programmering</h2>
+        <h2>PLC-taggar och signalhantering</h2>
 
-        <img src="../images/processflakt-plc.png"
-             alt="PLC-programmering"
+        <img src="../images/processflakt-taggar.png"
+             alt="PLC taggar"
              class="project-image">
 
         <p>
-            PLC-programmet utvecklades i Siemens TIA Portal med fokus på
-            struktur, tydlighet och återanvändbar kod.
+            Alla signaler definierades i PLC:n med tydliga taggar
+            för start, stopp och driftstatus.
         </p>
 
         <p>
-            Programmet använder funktionsblock för att styra
-            start- och stoppfunktioner samt hantera fläktens
-            driftstatus.
-        </p>
-
-        <p>
-            Projektet gav praktisk erfarenhet av tagghantering,
-            digitala signaler och programmering av Siemens PLC.
+            En strukturerad taggdatabas gör programmet enklare
+            att felsöka, dokumentera och koppla till HMI.
         </p>
 
     </section>
 
-    <section class="about" id="larm">
+    <section class="about">
+
+        <h2>Funktionsblock för fläktstyrning</h2>
+
+        <img src="../images/processflakt-fb.png"
+             alt="Funktionsblock"
+             class="project-image">
+
+        <p>
+            Processfläkten styrs via ett eget funktionsblock
+            som hanterar start- och stopplogik samt driftindikering.
+        </p>
+
+        <p>
+            Genom att kapsla logiken i ett eget FB blir
+            lösningen mer strukturerad och återanvändbar.
+        </p>
+
+    </section>
+
+    <section class="about">
+
+        <h2>Programstruktur i OB1</h2>
+
+        <img src="../images/processflakt-ob1.png"
+             alt="OB1"
+             class="project-image">
+
+        <p>
+            Huvudprogrammet anropar de olika funktionerna
+            och skapar en tydlig uppdelning mellan styrning,
+            larm och operatörsfunktioner.
+        </p>
+
+        <p>
+            Strukturen följer ett arbetssätt som används
+            i många automationsprojekt inom industrin.
+        </p>
+
+    </section>
+
+    <section class="about">
 
         <h2>Larmhantering</h2>
 
@@ -95,18 +130,13 @@
              class="project-image">
 
         <p>
-            För att skapa en mer realistisk automationslösning utvecklades
-            en separat larmfunktion som övervakar processens status.
+            En separat larmfunktion övervakar processens status
+            och genererar driftmeddelanden till operatören.
         </p>
 
         <p>
-            Genom att separera styrning och larm i olika programblock
-            blir systemet enklare att felsöka och vidareutveckla.
-        </p>
-
-        <p>
-            Arbetet gav erfarenhet av industriell programstruktur och
-            larmhantering i TIA Portal.
+            Genom att skilja larm från styrlogik blir systemet
+            enklare att underhålla och vidareutveckla.
         </p>
 
     </section>
@@ -120,25 +150,21 @@
              class="project-image">
 
         <p>
-            Operatörsgränssnittet utvecklades i WinCC Runtime för att ge
-            en tydlig överblick över fläktens driftstatus.
+            HMI-systemet utvecklades i WinCC Runtime och ger
+            operatören möjlighet att starta och stoppa fläkten
+            samt övervaka status i realtid.
         </p>
 
         <p>
-            Operatören kan starta och stoppa processen samt övervaka
-            händelser och larm direkt från HMI-skärmen.
-        </p>
-
-        <p>
-            HMI-lösningen verifierades tillsammans med PLC-programmet
-            genom simulering i PLCSIM.
+            Systemet visar också händelser och larm för att
+            ge en tydlig översikt av processen.
         </p>
 
     </section>
 
     <section class="about">
 
-        <h2>Kompetenser som använts</h2>
+        <h2>Tekniker som använts</h2>
 
         <ul>
             <li>Siemens TIA Portal</li>
@@ -155,7 +181,7 @@
 
     </section>
 
-    <section class="about">
+    <section class="about" id="larande">
 
         <h2>Lärdomar</h2>
 
@@ -165,9 +191,9 @@
         </p>
 
         <p>
-            Arbetet stärkte även mina kunskaper inom strukturerad
-            programuppbyggnad, larmhantering och testning av
-            automationslösningar.
+            Arbetet stärkte mina kunskaper inom strukturerad
+            programuppbyggnad, larmhantering och felsökning
+            av automationssystem.
         </p>
 
     </section>
@@ -185,4 +211,5 @@
     </footer>
 
 </body>
+
 </html>
