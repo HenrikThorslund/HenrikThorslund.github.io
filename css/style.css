@@ -210,6 +210,22 @@ header h1 {
     color: white;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.examensarbete {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
 /* =========================
    KORTINNEHÅLL
 ========================= */
