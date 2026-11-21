@@ -37,7 +37,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
 
 .logo {
@@ -59,7 +59,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
 }
 
 /* =========================
@@ -67,7 +67,7 @@ nav {
 ========================= */
 
 header {
-    background: linear-gradient(135deg, #0f172a, #1e40af);
+    background: linear-gradient(135deg,#0f172a,#1e40af);
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -81,22 +81,6 @@ header h1 {
 .subtitle {
     color: #dbeafe;
     font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.hero-button {
-    display: inline-block;
-    background: white;
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.hero-button:hover {
-    transform: translateY(-2px);
 }
 
 /* =========================
@@ -104,12 +88,12 @@ header h1 {
 ========================= */
 
 .about {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 35px;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
 .about h2 {
@@ -130,7 +114,7 @@ header h1 {
 }
 
 /* =========================
-   PROJEKT
+   PROJEKTKORT
 ========================= */
 
 .projects {
@@ -139,128 +123,21 @@ header h1 {
     padding: 20px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
     gap: 30px;
 }
-.project-image {
-    width: 100%;
-    max-width: 1000px;
-    display: block;
-    margin: 20px auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+
 .card {
     background: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
 }
-
-.placeholder {
-    height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-}
-
-/* =========================
-   PROJEKTFÄRGER
-========================= */
-
-/* Processfläkt */
-
-.plc {
-    background: linear-gradient(135deg, #2563eb, #60a5fa);
-    color: white;
-}
-
-/* Pumpstation */
-
-.pump {
-    background: linear-gradient(135deg, #0891b2, #22d3ee);
-    color: white;
-}
-
-/* Felsökning */
-
-.troubleshooting {
-    background: linear-gradient(135deg, #ea580c, #fb923c);
-    color: white;
-}
-
-/* Modernisering */
-
-.modernization {
-    background: linear-gradient(135deg, #9333ea, #c084fc);
-    color: white;
-}
-
-/* Praktiskt projekt */
-
-.practical {
-    background: linear-gradient(135deg, #16a34a, #4ade80);
-    color: white;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 25px;
-}
-
-.examensarbete {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.project-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    padding: 15px 20px 0;
-}
-
-.project-card p {
-    padding: 10px 20px 20px;
-    line-height: 1.6;
-}
-
-
-
-
-/* =========================
-   KORTINNEHÅLL
-========================= */
 
 .card-content {
     padding: 30px;
@@ -270,41 +147,46 @@ header h1 {
     margin-bottom: 15px;
 }
 
-.card-content p {
-    margin-bottom: 15px;
-}
-
 /* =========================
-   TAGGAR
+   GALLERI
 ========================= */
 
-.tag {
-    display: inline-block;
-    background: #e2e8f0;
-    color: #334155;
-    padding: 5px 12px;
-    margin-right: 6px;
-    margin-bottom: 8px;
-    border-radius: 20px;
-    font-size: 0.85rem;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-/* =========================
-   KNAPPAR
-========================= */
-
-.button {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: 0.3s;
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: all .3s ease;
 }
 
-.button:hover {
-    background: #1d4ed8;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    background: #f8fafc;
+    padding: 15px;
+}
+
+.project-card h3 {
+    padding: 20px 20px 10px;
+    color: #0f172a;
+}
+
+.project-card p {
+    padding: 0 20px 20px;
+    color: #475569;
 }
 
 /* =========================
@@ -357,17 +239,9 @@ footer {
     padding: 30px;
 }
 
-footer p {
-    margin-bottom: 10px;
-}
-
 footer a {
     color: #60a5fa;
     text-decoration: none;
-}
-
-footer a:hover {
-    color: white;
 }
 
 /* =========================
@@ -390,21 +264,16 @@ footer a:hover {
         font-size: 2.2rem;
     }
 
-    .placeholder {
-        height: 180px;
-        font-size: 45px;
-    }
-
-    .card-content {
-        padding: 20px;
-    }
-
     .about {
         margin: 20px;
         padding: 25px;
     }
 
-    .projects {
+    .gallery {
         grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        height: auto;
     }
 }
