@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumpstation | Henrik Thorslund</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        ⚡ Henrik Thorslund
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Hem</a>
+        <a href="#oversikt">Översikt</a>
+        <a href="#galleri">Projektgalleri</a>
+        <a href="#tester">Tester</a>
+    </div>
+
+</nav>
+
+<header>
+
+    <h1>Vattennivåstyrning med Siemens S7-1200 och WinCC</h1>
+
+    <p class="subtitle">
+        TIA Portal V21 • WinCC • PLC-simulering • HMI
+    </p>
+
+</header>
+
+<section class="about" id="oversikt">
+
+    <h2>Projektöversikt</h2>
+
+    <p>
+        Projektet simulerar en industriell pumpstation där två pumpar
+        används för att hålla rätt nivå i en vattentank.
+    </p>
+
+    <ul>
+        <li>Automatisk nivåstyrning</li>
+        <li>Reservpump vid fel</li>
+        <li>Larmhantering</li>
+        <li>WinCC HMI</li>
+        <li>PLCSIM-testning</li>
+        <li>TIA Portal V21</li>
+    </ul>
+
+</section>
+
 <section class="about" id="galleri">
 
     <h2>Projektgalleri</h2>
@@ -45,7 +103,7 @@
         </div>
 
         <div class="project-card">
-            <img src="images/skalning-av-matvarden.jpg" alt="Skalning av mätvärden">
+            <img src="images/skalning-av-matvarden.jpg" alt="Skalning">
             <h3>Signalbehandling</h3>
             <p>
                 Analoga signaler normaliseras och skalas till användbara processtal.
@@ -71,3 +129,51 @@
     </div>
 
 </section>
+
+<section class="about" id="tester">
+
+    <h2>Testprotokoll</h2>
+
+    <table>
+
+        <tr>
+            <th>Test</th>
+            <th>Förväntat resultat</th>
+        </tr>
+
+        <tr>
+            <td>Låg nivå</td>
+            <td>Pump 1 startar</td>
+        </tr>
+
+        <tr>
+            <td>Hög nivå</td>
+            <td>Pump 1 stoppar</td>
+        </tr>
+
+        <tr>
+            <td>Pumpfel</td>
+            <td>Reservpump tar över</td>
+        </tr>
+
+        <tr>
+            <td>Hög nivå-larm</td>
+            <td>Larm visas på HMI</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Henrik Thorslund</p>
+
+    <p>
+        <a href="index.html">← Tillbaka till startsidan</a>
+    </p>
+
+</footer>
+
+</body>
+</html>
